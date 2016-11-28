@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+    <!-- SEO -->
+    <meta name="Description" content="">
+    <meta name="Rating" content="">
+    <meta name="Author" content="">
+    <meta name="Robots" content="index,follow">
+
+    <!-- CONFIG -->
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="_csrf_token" content="{!! csrf_token() !!}">
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="{!! asset('libs/font-awesome-4.3.0/css/font-awesome.min.css') !!}">
+    <link rel="stylesheet" href="{!! asset('libs/animate/animate.min.css') !!}">
+    <link rel="stylesheet" href="{!! asset('libs/responsive-nav/responsive-nav.css') !!}">
+
+    <link rel="stylesheet" href="{!! asset('css/home/fonts.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/home/main.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/home/media.css') !!}"> -->
+
+    <link rel="stylesheet" href="libs/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/animate/animate.min.css">
+    <link rel="stylesheet" href="libs/chosen_v1.6.2/chosen.min.css">
+    <link rel="stylesheet" href="libs/SlickNav/slicknav.css">
+    <!-- <link rel="stylesheet" href="libs/fixed-nav/css/styles.css"> -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" href="libs/fixed-nav/css/ie.css">
+    <![endif]-->
+    <!-- <link rel="stylesheet" href="libs/responsive-nav/responsive-nav.css"> -->
+
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <!-- Scripts -->
+    <!-- <script src="{!! asset('libs/modernizr/modernizr.js') !!}"></script> -->
+    <script src="libs/modernizr/modernizr.js"></script>
+
+    <!-- we can live with IE -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Потасовка</title>
+</head>
+
+<body>
+
+<!--[if lt IE 10]>
+<p class="browsehappy">Вы используете <strong>УСТАРЕВШИЙ Internet Explorer</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">обновите ваш Браузер</a> чтобы увидеть больше возможностей на сайтах!</p>
+<![endif]-->
+
+<!-- Preloader  -->
+<!-- <div class="loader">
+    <div class="loader_inner"></div>
+</div> -->
+
+<div class="popup-overlay"></div>
+
+<!-- <div class="popup-form">
+    <div class="close-popup"><i class="fa fa-close"></i></div>
+    <form id="register-form" class="registration-form">
+        <h2 class="text-center">РЕГИСТРАЦИЯ</h2>
+        <input name="name" type="text" class="registration-team required" placeholder="Название команды">
+        <input name="email" type="email" class="registration-email required" placeholder="Email">
+        <input name="phone" type="text" class="registration-phone required" placeholder="Телефон">
+        <input id="form-gameId" name="game_id" type="hidden" value="@if (isset($game)){!! $game->id !!}@endif">
+
+        <button id="register-game-button" class="js-button registration-button">Отправить</button>
+    </form>
+</div> -->
+
+<div class="popup-message">
+    <h3 class="text-center">Ваше сообщение было успешно отправлено</h3>
+</div>
+
+<div class="popup-message-register">
+    <h3 class="text-center">Вы успешно зарегистировались на игру</h3>
+</div>
+
+<nav class="side-nav">
+    <ul>
+        <li><a href="#main"></a></li>
+        <li><a href="#information"></a></li>
+        <li><a href="#rules"></a></li>
+        <li><a href="#registration"></a></li>
+        <li><a href="#contacts"></a></li>
+    </ul>
+</nav>
+
+<header id="main" class="header-main">
+    <div class="container-fluid">
+        <div class="nav-collapse-layer">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!-- <a id="nav-toggle-custom"></a> -->
+                    <nav class="page-nav nav-collapse">
+                    <!-- <nav class="page-nav"> -->
+                        <ul>
+                            <li><a href="#main">Главная</a></li>
+                            <li><a href="#information">Информация</a></li>
+                            <li><a href="#rules">Правила</a></li>
+                            <li><a href="#registration">Регистрация</a></li>
+                            <li><a href="#contacts">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="banner">
+                <div class="col-md-6 col-sm-12 banner-image">
+                    <img src="img/hand.png" alt="Потасовка" class="banner-img">
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="banner-content">
+                        <h1>Потасовка</h1>
+                        <div class="clearfix"></div>
+                        
+                        <!--  <a href="#" class="google">
+                            <div class="googleplay-link">
+                                <img class="active" src="img/googleplay_1.png" />
+                                <img class="inactive" src="img/googleplay_2.png" />
+                            </div>
+                        </a>
+                        <br class="sm-visible">
+                        <a href="#" class="apple">
+                            <div class="appstore-link">
+                                <img class="active" src="img/appstore_1.png" />
+                                <img class="inactive" src="img/appstore_2.png" />
+                            </div>
+                        </a> -->
+
+                        <a href="#" class="googleplay-link">
+                            <img class="active" src="img/googleplay_1.png" />
+                            <img class="inactive" src="img/googleplay_2.png" />
+                        </a>
+                        <br class="sm-visible">
+                        <a href="#" class="appstore-link">
+                            <img class="active" src="img/appstore_1.png" />
+                            <img class="inactive" src="img/appstore_2.png" />
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<section id="information" class="information">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <h2 class="informamtion-title">Информация</h2>
+                <div class="informamtion-content">
+                    <p>Равным образом реализация намеченных плановых заданий играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач.</p>
+                    <div class="divider"></div>
+                    <p>Таким образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании модели развития. Не следует, однако забывать, что рамки и место обучения кадров требуют определения и уточнения форм развития.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="rules" class="rules">
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="small-visible">
+                <div class="rule clearfix" data-number="1">
+                    <!-- <span class="number before">1</span> -->
+                    <div class="content">
+                        <h2>РЕГИСТРИРУЙСЯ</h2>
+                        <p>Участие могут принять от 2 до 8 <br class="sm-hide"> человек</p>
+                    </div>
+                    <div class="icon">
+                        <img src="img/rule-icon-1.png" alt="Потасовка">
+                    </div>
+                </div>
+
+                <div class="rule clearfix" data-number="2">
+                    <!-- <span class="number after">2</span> -->
+                    <div class="content">
+                        <h2>ПРИХОДИ</h2>
+                        <p>Наши игры проходят в популярных <br class="sm-hide"> кафе и барах</p>
+                    </div>
+                    <div class="icon">
+                        <img src="img/rule-icon-2.png" alt="Потасовка">
+                    </div>
+                </div>
+
+                <div class="rule clearfix" data-number="3">
+                    <!-- <span class="number before">3</span> -->
+                    <div class="content">
+                        <h2>ИГРАЙ</h2>
+                        <p>Во время игры можно заказывать <br class="sm-hide"> еду и напитки</p>
+                    </div>
+                    <div class="icon">
+                        <img src="img/rule-icon-3.png" alt="Потасовка">
+                    </div>
+                </div>
+
+                <div class="rule clearfix" data-number="4">
+                    <!-- <span class="number after">4</span> -->
+                    <div class="content">
+                        <h2>ПОБЕЖДАЙ</h2>
+                        <p>Каждую игру будет определяться <br class="sm-hide"> тройка победителей</p>
+                    </div>
+                    <div class="icon">
+                        <img src="img/rule-icon-4.png" alt="Потасовка">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section id="registration" class="registration">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="calendar-wrapper">
+                    <select class="city">
+                        <option value="minsk">Минск</option>
+                        <option value="gomel">Гомель</option>
+                        <option value="brest">Брест</option>
+                        <option value="vitebsk">Витебск</option>
+                        <option value="grodno">Гродно</option>
+                        <option value="mogilev">Могилев</option>
+                    </select>
+                    <div id="calendar" class="calendar"></div>
+                </div>
+
+                <div class="common-info">
+                    <div class="reg-descr">
+                        <h2>БАР <br class="sm-visible"> БАНКИ БУТЫЛКИ</h2>
+                        <p class="address">г. Минск <br class="sm-visible"> ул. Свердлова 15а</p>
+                        <p class="time">18:00</p>
+                        <button class="js-button show-register">Регистрация</button>
+                    </div>
+
+                    <div class="popup-form">
+                        <div class="close-popup"><img src="img/cross-out.png" alt="Потасовка"></div>
+                        <form id="register-form" class="registration-form">
+                            <h2 class="text-center">РЕГИСТРАЦИЯ</h2>
+                            <input name="name" type="text" class="registration-team required" placeholder="Название команды">
+                            <input name="email" type="email" class="registration-email required" placeholder="Количество человек">
+                            <input name="phone" type="text" class="registration-phone required" placeholder="Телефон">
+                            <input id="form-gameId" name="game_id" type="hidden" value="@if (isset($game)){!! $game->id !!}@endif">
+
+                            <button id="register-game-button" class="js-button registration-button">Отправить</button>
+                        </form>
+                    </div>
+
+                    <div class="no-game">
+                        <h2>В ЭТОМ ГОРОДЕ НЕТ ИГР <br class="sm-hide"> В БЛИЖАЙШЕЕ ВРЕМЯ</h2>
+                        <p>СЛЕДИТЕ ЗА НОВОСТЯМИ <br class="sm-hide"> В СОЦИАЛЬНЫХ СЕТЯХ</p>
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="#"><img src="img/icon-fb.png" alt="Потасовка"></a></li>
+                                <li><a href="#"><img src="img/icon-tw.png" alt="Потасовка"></a></li>
+                                <li><a href="#"><img src="img/icon-insta.png" alt="Потасовка"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h4 class="brand">ПОТАСОВКА</h2>
+                </div>
+
+                <!-- @if (isset($game))
+                    <div class="reg-descr">
+                        <h2 id="game-info"><span>{!! $game->info !!}</span></h2>
+                        <p id="game-address" class="address"><span>{!! $game->address !!}</span></p>
+                        <p id="game-time" class="time"><span>{!! (new DateTime($game->date))->format('H:i') !!}</span></p>
+                    </div>
+                @endif -->
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section id="contacts" class="contacts">
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- <div class="col-lg-9 col-lg-push-3 col-md-9 col-md-push-3 col-sm-9 col-sm-push-3 col-xs-12"> -->
+            <div class="col-md-9 col-md-push-3 col-sm-12">
+                <div class="form-wrapper">
+                    <form id="contact-form" class="callback-form">
+                        <h2 class="text-center">ОБРАТНАЯ СВЯЗЬ</h2>
+                        <div class="data">
+                            <input name="name" type="text" class="callback-name required" placeholder="Имя">
+                            <input name="email" type="email" class="callback-email required" placeholder="Email">
+                            <input name="subject" type="text" class="callback-subject required" placeholder="Тема">
+                        </div>
+
+                        <div class="message">
+                            <textarea name="message" class="callback-message required" placeholder="Сообщение"></textarea>
+                            <button id="send-email" class="js-button send-message">Отправить сообщение</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-3 col-lg-pull-9 col-md-3 col-md-pull-9 col-sm-3 col-sm-pull-9 col-xs-12 text-center side-contacts"> -->
+            <div class="col-md-3 col-md-pull-9 col-sm-12 text-center side-contacts">
+
+                <div class="contact-wrapper">
+                    <div class="contact-icon">
+                        <img src="img/contact-icon-1.png" alt="Потасовка">
+                    </div>
+                    <p class="contact-content">+375 (29) 202-03-27</p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-icon">
+                        <img src="img/contact-icon-2.png" alt="Потасовка">
+                    </div>
+                    <p class="contact-content share-icons">
+                        <a href="#"><img src="img/share-youtube.png" alt="Потасовка"></a>
+                        <a href="#"><img src="img/share-twitter.png" alt="Потасовка"></a>
+                        <a href="#"><img src="img/share-insta.png" alt="Потасовка"></a>
+                    </p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-icon">
+                        <img src="img/contact-icon-3.png" alt="Потасовка">
+                    </div>
+                    <p class="contact-content">potasovka@gmail.com</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--[if lt IE 9]>
+<script src="{!! asset('libs/html5shiv/es5-shim.min.js') !!}"></script>
+<script src="{!! asset('libs/html5shiv/html5shiv.min.js') !!}"></script>
+<script src="{!! asset('libs/html5shiv/html5shiv-printshiv.min.js') !!}"></script>
+<script src="{!! asset('libs/respond/respond.min.js') !!}"></script>
+<![endif]-->
+
+<!-- <script src="{!! asset('libs/jquery/jquery-2.1.4.min.js') !!}"></script>
+<script src="{!! asset('libs/responsive-nav/responsive-nav.min.js') !!}"></script>
+<script src="{!! asset('libs/animate/animate-css.js') !!}"></script>
+<script src="{!! asset('libs/WOW-master/wow.min.js') !!}"></script>
+<script src="{!! asset('libs/jquery-ui-datepicker/jquery-ui.min.js') !!}"></script>
+
+<script src="{!! asset('js/home/common.js') !!}"></script> -->
+
+<!--[if lt IE 9]>
+<script src="libs/html5shiv/es5-shim.min.js"></script>
+<script src="libs/html5shiv/html5shiv.min.js"></script>
+<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+<script src="libs/respond/respond.min.js"></script>
+<![endif]-->
+
+<script src="libs/jquery/jquery-2.1.4.min.js"></script>
+<script src="libs/SlickNav/jquery.slicknav.min.js"></script>
+<!-- <script src="libs/fixed-nav/js/responsive-nav.js"></script> -->
+<!-- <script src="libs/responsive-nav/responsive-nav.min.js"></script> -->
+<script src="libs/animate/animate-css.js"></script>
+<script src="libs/WOW-master/wow.min.js"></script>
+<script src="libs/jquery-ui-datepicker/jquery-ui.min.js"></script>
+<script src="libs/chosen_v1.6.2/chosen.jquery.min.js"></script>
+
+<script src="js/common.js"></script>
+</body>
+</html>

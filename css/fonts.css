@@ -1,0 +1,150 @@
+/* @font-face {
+	font-family: "RobotoRegular";
+	src: url("../../fonts/RobotoRegular/RobotoRegular.eot");
+	src: url("../../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"),
+			 url("../../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
+			 url("../../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Regular';
+    src: url('../../fonts/SFUIDisplay-Regular.otf');
+    src: url('../../fonts/SFUIDisplay-Regular.otf') format('embedded-opentype'),
+	     url('../../fonts/SFUIDisplay-Regular.otf') format('woff'),
+	     url('../../fonts/SFUIDisplay-Regular.otf') format('truetype'),
+	     url('../../fonts/SFUIDisplay-Regular.otf') format('svg');
+    src: local('SFUIDisplay-Regular'),
+    	 url('../../fonts/SFUIDisplay-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Light';
+    src: url('../../fonts/SFUIDisplay-Light.otf');
+    src: url('../../fonts/SFUIDisplay-Light.otf') format('embedded-opentype'),
+	     url('../../fonts/SFUIDisplay-Light.otf') format('woff'),
+	     url('../../fonts/SFUIDisplay-Light.otf') format('truetype'),
+	     url('../../fonts/SFUIDisplay-Light.otf') format('svg');
+    src: local('SFUIDisplay-Light'),
+    	 url('../../fonts/SFUIDisplay-Light.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Thin';
+    src: url('../../fonts/SFUIDisplay-Thin.otf');
+    src: url('../../fonts/SFUIDisplay-Thin.otf') format('embedded-opentype'),
+	     url('../../fonts/SFUIDisplay-Thin.otf') format('woff'),
+	     url('../../fonts/SFUIDisplay-Thin.otf') format('truetype'),
+	     url('../../fonts/SFUIDisplay-Thin.otf') format('svg');
+    src: local('SFUIDisplay-Thin'),
+    	 url('../../fonts/SFUIDisplay-Thin.otf');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+
+@font-face {
+	font-family: "RobotoRegular";
+	src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+	src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"),
+			 url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
+			 url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Regular';
+    src: url('../fonts/SFUIDisplay-Regular.otf');
+    src: url('../fonts/SFUIDisplay-Regular.otf') format('embedded-opentype'),
+	     url('../fonts/SFUIDisplay-Regular.otf') format('woff'),
+	     url('../fonts/SFUIDisplay-Regular.otf') format('truetype'),
+	     url('../fonts/SFUIDisplay-Regular.otf') format('svg');
+    src: local('SFUIDisplay-Regular'),
+    	 url('../fonts/SFUIDisplay-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Light';
+    src: url('../fonts/SFUIDisplay-Light.otf');
+    src: url('../fonts/SFUIDisplay-Light.otf') format('embedded-opentype'),
+	     url('../fonts/SFUIDisplay-Light.otf') format('woff'),
+	     url('../fonts/SFUIDisplay-Light.otf') format('truetype'),
+	     url('../fonts/SFUIDisplay-Light.otf') format('svg');
+    src: local('SFUIDisplay-Light'),
+    	 url('../fonts/SFUIDisplay-Light.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Ultralight';
+    src: url('../fonts/SFUIDisplay-Ultralight.otf');
+    src: url('../fonts/SFUIDisplay-Ultralight.otf') format('embedded-opentype'),
+	     url('../fonts/SFUIDisplay-Ultralight.otf') format('woff'),
+	     url('../fonts/SFUIDisplay-Ultralight.otf') format('truetype'),
+	     url('../fonts/SFUIDisplay-Ultralight.otf') format('svg');
+    src: local('SFUIDisplay-Ultralight'),
+    	 url('../fonts/SFUIDisplay-Ultralight.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Thin';
+    src: url('../fonts/SFUIDisplay-Thin.otf');
+    src: url('../fonts/SFUIDisplay-Thin.otf') format('embedded-opentype'),
+	     url('../fonts/SFUIDisplay-Thin.otf') format('woff'),
+	     url('../fonts/SFUIDisplay-Thin.otf') format('truetype'),
+	     url('../fonts/SFUIDisplay-Thin.otf') format('svg');
+    src: local('SFUIDisplay-Thin'),
+    	 url('../fonts/SFUIDisplay-Thin.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Bold';
+    src: url('../fonts/SFUIDisplay-Bold.otf');
+    src: url('../fonts/SFUIDisplay-Bold.otf') format('embedded-opentype'),
+	     url('../fonts/SFUIDisplay-Bold.otf') format('woff'),
+	     url('../fonts/SFUIDisplay-Bold.otf') format('truetype'),
+	     url('../fonts/SFUIDisplay-Bold.otf') format('svg');
+    src: local('SFUIDisplay-Bold'),
+    	 url('../fonts/SFUIDisplay-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Heavy';
+    src: url('../fonts/SFUIDisplay-Heavy.otf');
+    src: url('../fonts/SFUIDisplay-Heavy.otf') format('embedded-opentype'),
+	     url('../fonts/SFUIDisplay-Heavy.otf') format('woff'),
+	     url('../fonts/SFUIDisplay-Heavy.otf') format('truetype'),
+	     url('../fonts/SFUIDisplay-Heavy.otf') format('svg');
+    src: local('SFUIDisplay-Heavy'),
+    	 url('../fonts/SFUIDisplay-Heavy.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Semibold';
+    src: url('../fonts/SFUIDisplay-Semibold.otf');
+    src: url('../fonts/SFUIDisplay-Semibold.otf') format('embedded-opentype'),
+         url('../fonts/SFUIDisplay-Semibold.otf') format('woff'),
+         url('../fonts/SFUIDisplay-Semibold.otf') format('truetype'),
+         url('../fonts/SFUIDisplay-Semibold.otf') format('svg');
+    src: local('SFUIDisplay-Semibold'),
+         url('../fonts/SFUIDisplay-Semibold.otf');
+    font-weight: normal;
+    font-style: normal;
+}

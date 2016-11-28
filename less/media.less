@@ -1,0 +1,950 @@
+// fonts
+@sfui-ultralight: "SFUIDisplay-Ultralight", sans-serif;
+@sfui-thin: "SFUIDisplay-Thin", sans-serif;
+@sfui-bold: "SFUIDisplay-Bold", sans-serif;
+@sfui-heavy: "SFUIDisplay-Heavy", sans-serif;
+@sfui-semibold: "SFUIDisplay-Semibold", sans-serif;
+
+// colors
+@brand-color: #a7dbdb;
+@brand-color-darken: darken(@brand-color, 7%);
+
+// Mode: Tablet
+@tablet: 768px;
+@tablet-area: 750px;
+
+// Mode: Desktop
+@desktop: 1024px;
+@desktop-area: 970px;
+
+/* Display Flex */
+/* контейнер для выравниваемых элементов */
+.flex-container {
+    justify-content: space-around;  /* выравнивание по главной оси, блоки равномерно распределены вдоль главной оси */
+    align-items: center;        /* выравнивание по поперечной оси, блоки располагаются в центре поперечной оси */
+    flex-direction: row;       /* Направление главной оси flex-контейнера, row по умолчанию, слева направо (в rtl справа налево) */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1366px) {
+	/* .rules .rule:nth-child(1) .icon img {width: 158px;}
+	.rules .rule:nth-child(2) .icon img {width: 198px;}
+	.rules .rule:nth-child(3) .icon img {width: 190px;}
+	.rules .rule:nth-child(4) .icon img {width: 206px;} */
+	.rules .rule:nth-child(1) .icon img,
+	.rules .rule:nth-child(2) .icon img,
+	.rules .rule:nth-child(3) .icon img,
+	.rules .rule:nth-child(4) .icon img {width: 158px;}
+}
+
+@media only screen and (max-width : 1200px) {
+	.registration-form {
+	    width: 70%;
+	    h2 {
+	        font-size: 4.2em;
+	        margin-bottom: 25px;
+	    }
+	    input {
+	        font-size: 3em;
+	        margin-bottom: 23px;
+	    }
+	}
+
+	.registration {
+	    .common-info {
+	        width: 500px;
+	        padding: 50px 0 0;
+	    }
+
+	    .reg-descr {
+	        h2 {
+	            font-size: 4.4em;
+	        }
+	        .address {
+	            font-size: 3.8em;
+	        }
+	        .time {
+	            font-size: 10em;
+	        }
+	        .show-register {
+	            // font-size: 3.4em;
+	        }
+	    }
+
+	    .popup-form {
+	        .close-popup {
+	            right: 18px;
+	            top: 18px;
+	            transform: scale(.9);
+	        }
+	    }
+
+	    .no-game {
+	        h2 {
+	            font-size: 3.8em;
+	            margin: 30px 0 14px;
+	        }
+	        p {
+	            font-size: 3.8em;
+	        }
+	    }
+	}
+}
+
+
+@media only screen and (max-width : 1170px) {
+	.page-nav {
+		li {margin-right: 40px;}
+	}
+	.rules {
+		 .small-visible {
+	        .rule {
+				&:nth-child(2) {margin-top: 0;}
+				&:nth-child(3) {margin-top: 0;}
+				&:nth-child(4) {margin-top: 0;}
+			}
+		}
+	}
+
+	.contacts {
+		.form-wrapper {
+			display: block;
+			margin: 0 auto;
+
+			.data {
+				width: 40%;
+			}
+			.message {
+				width: 54%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 1080px) {
+	.rules {
+		.rules-list {
+			.rule {
+				div:last-child {
+					padding: 0 40px 0 10%;
+				}
+			}
+		}
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+{
+	.side-nav {
+		display: none;
+	}
+	// .page-nav {
+	// 	float: none;
+	// 	li {
+	// 		display: block;
+	// 	}
+	// }
+
+	.js .page-nav {
+		display:none;
+	}
+	
+	.js .slicknav_menu {
+		display:block;
+	}
+
+	header {
+		background-position: right top;
+		.banner {
+			.sm-visible {display: block;}
+			.banner-image {
+				text-align: center;
+			}
+			.banner-content {
+				margin: 66px 0 0 0px;
+				text-align: center;
+				
+				p {
+					padding: 20px 0 267px 100px;
+				}
+				a {
+					display: inline-block;
+					float: none;
+					margin: 0 auto;
+					width: 205px;
+					&.appstore-link {
+						margin: 10px auto 20px;
+					}
+				}
+				
+			}
+		}
+	}
+
+	.information {
+		padding: 120px 0 65px;
+		.informamtion-title {margin-bottom: 35px;}
+		.informamtion-content {p {}}
+	}
+
+	.rules {
+		padding-top: 44px 0;
+		.small-visible {display: block;}
+	}
+
+	.rules .small-visible .rule:nth-child(1) div.icon img,
+	.rules .small-visible .rule:nth-child(3) div.icon img {margin-left: 0;}
+
+	.rules .small-visible .rule:nth-child(2) div.icon img,
+	.rules .small-visible .rule:nth-child(4) div.icon img {margin-right: 0;}
+
+	.calendar-wrapper {
+		margin-top: 160px;
+		position: static;
+	}
+	.calendar {
+		display: inline-block;
+	}
+
+	.registration {
+	    .common-info {
+	        margin: 80px auto 0;
+	    }
+	}
+
+	.contacts {
+		.side-contacts {
+			// display: block;
+			display: inline;
+			.contact-wrapper {
+				.contact-icon {display: none;}
+				.share-icons {
+					a {
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+		.form-wrapper {
+			padding: 40px 0;
+			text-align: center;
+			width: 90%;
+
+			.data {
+				float: none;
+				margin: 0 auto;
+				// width: 100%;
+				width: 500px;
+				input {
+					font-size: 22px;
+				}
+			}
+			.message {
+				margin: 0;
+				// width: 100%;
+				width: 500px;
+				textarea, .send-message {
+					font-size: 22px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 920px) {
+	.rules {
+		.rules-list {
+			.rule {
+				padding: 0 0 58px 0;
+				div:first-child {
+					padding: 0 0 0 30px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 800px) {
+	.side-nav {
+		right: 16px;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+{
+	header {
+		// padding: 0 0 50px 0;
+		.banner {
+			margin-top: 50px;
+			.banner-image {
+				// text-align: left;
+			}
+			.banner-content {
+				margin: 50px 0 0;
+			}
+		}
+	}
+
+	.information {
+		padding: 70px 0 10px;
+		.informamtion-title {
+			font-size: 5em;
+			margin-bottom: 20px;
+		}
+		.informamtion-content {
+			p {
+				font-size: 3.5em;
+				margin-bottom: 50px;
+			}
+			.divider {margin: 0 auto 40px;}
+		}
+	}
+
+	.rules {
+		.sm-hide {display: none;}
+	}
+
+	.registration {
+		.calendar-wrapper {
+			display: block;
+			// right: 30px;
+			.calendar {
+				display: table;
+				margin: 0 auto;
+			}
+			.ui-datepicker-calendar td {
+				padding: 0 6px;
+			}
+			.ui-datepicker-month {
+				font-size: 38px;
+			}
+			.ui-datepicker-prev,
+			.ui-datepicker-next {
+				top: 22px;
+			}
+		}
+		.chosen-container {top: -220px;}
+	}
+	
+
+	.contacts .contact-content.share-icons {
+		margin: 20px 0 0;
+		padding-bottom: 60px;
+	}
+
+	/* .contacts {
+		.form-wrapper {
+			padding: 40px 0;
+	
+			.data {
+				input {
+					font-size: 22px;
+				}
+			}
+			.message {
+				textarea,
+				.send-message {
+					font-size: 22px;
+				}
+			}
+		}
+	} */
+
+    /*Disable Animation on Mobile Devices*/
+    .animated
+    {
+        /*CSS transitions*/
+        -webkit-transition-property: none !important;
+                transition-property: none !important;
+        -webkit-transform: none !important;
+        /*CSS transforms*/
+            -ms-transform: none !important;
+                transform: none !important;
+        /*CSS animations*/
+        -webkit-animation: none !important;
+            -ms-animation: none !important;
+                animation: none !important;
+    }
+}
+
+
+@media only screen and (max-width : 767px) {
+	/* .contacts {
+		.side-contacts {
+			.flex-container;
+			padding: 40px 0 0;
+	
+			.contact-wrapper {
+				display: inline-block;
+			}
+		}
+		
+		.form-wrapper {
+			display: block;
+			margin: 0 auto;
+			padding: 40px 0;
+			width: 95%; 
+	
+			.data {
+				width: 40%;
+				input {
+					font-size: 22px;
+				}
+			}
+			.message {
+				width: 52%;
+				textarea {
+					font-size: 22px;
+				}
+			}
+		}
+	} */
+}
+
+@media only screen and (max-width : 670px) {
+	.rules {
+		.rules-list {
+			.rule {
+				div {
+					&.content {
+						h2 {
+							font-size: 24px;
+						}
+						p {
+							font-size: 18px;
+						}
+					}
+					&:first-child {
+						// padding: 0 0 0 10px;
+					}
+					&:last-child {
+						// padding: 0 20px 0 60px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 630px) {
+	/* .registration {
+		text-align: center;
+		.show-register {
+			display: block;
+			margin: 60px auto 20px;
+		}
+	} */
+}
+
+@media only screen and (max-width : 600px) {
+	// header {background-position: center top;}
+
+	.rules {
+		// padding-top: 0;
+		.small-visible {
+			.rule {
+	            div {
+	                &.content {
+	                    h2 {
+	                        font-size: 30px;
+	                    }
+	                    p {
+	                        font-size: 20px;
+	                    }
+	                }
+	            }
+
+	            &:nth-child(1),
+	            &:nth-child(3) {
+	            	div {
+	            		margin-left: 80px;
+	            	}
+	            }
+
+	            &:nth-child(2),
+	            &:nth-child(4) {
+	            	div {
+	            		margin-right: 80px;
+	            	}
+	            }
+
+	            &:nth-child(1):before,
+	            &:nth-child(3):before,
+	            &:nth-child(2):after,
+	            &:nth-child(4):after {
+	                // font-size: 10em !important;
+	                font-size: 70px;
+	                top: -2px;
+	            }
+	        }
+		}
+	}
+
+	.registration-form {
+	    width: auto;
+	    h2 {
+	        font-size: 3.8em;
+	    }
+	    input {
+	    	font-family: @sfui-thin;
+	        margin: 0 auto 23px;
+	        width: 300px;
+	    }
+	    .registration-button {
+	        font-size: 3.4em;
+            width: 260px;
+	    }
+	}
+
+	.registration {
+	    .common-info {
+	    	border: 10px solid #fff;
+	    	border-bottom-width: 0;
+	    	height: 580px;
+	        width: 80%;
+	    }
+
+	    .reg-descr {
+	        h2 {
+	            font-size: 4em;
+	        }
+	        .address {
+	            font-size: 3.4em;
+	            margin: 20px 0 10px;
+	        }
+	        .time {
+	            font-size: 8em;
+	        }
+	        .show-register {
+	            font-size: 3.4em;
+	            // margin: 40px auto 0;
+	            width: 260px;
+	        }
+	    }
+
+	    .no-game {
+	        h2 {
+	            font-size: 3.4em;
+	            margin: 30px 0;
+	        }
+	        p {
+	            font-size: 3.4em;
+	            margin-bottom: 38px;
+	        }
+	    }
+	}
+}
+
+@media only screen and (max-width : 580px) {
+	.contacts {
+		.form-wrapper {
+			h2 {font-size: 32px;}
+			.data, .message {width: 100%;}
+		}
+	}
+}
+
+@media only screen and (max-width : 520px) {
+	.registration {
+		.common-info {}
+	    .no-game {
+	        .social-icons {
+	            li {
+	                img {width: 70px;}
+	            }
+	        }
+	    }
+	}
+}
+
+@media only screen and (max-width : 500px)
+{
+	.page-nav {
+		li {
+			display: block;
+		}
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+{
+	header {
+		.banner {
+			.banner-image {
+				text-align: left;
+			}
+			.banner-content {
+				h1 {
+					font-size: 38px;
+				}
+				.googleplay-link,
+				.appstore-link {
+					margin-bottom: -14px;
+					width: 160px;
+				}
+			}
+		}
+	}
+
+	.information {
+		padding: 40px 0 10px;
+		.informamtion-title {
+			font-size: 4em;
+			margin-bottom: 5px;
+		}
+		.informamtion-content {
+			margin: 0 auto;
+			width: 90%;
+			p {
+				font-size: 2.6em;
+				margin-bottom: 30px;
+			}
+			.divider {
+				margin: 0 auto 20px;
+				width: 90%;
+			}
+		}
+	}
+
+	.rules {
+		.small-visible {
+			.rule {
+	            &:nth-child(1),
+	            &:nth-child(3) {
+	            	div {
+	            		margin-left: 60px;
+	            	}
+	            }
+
+	            &:nth-child(2),
+	            &:nth-child(4) {
+	            	div {
+	            		margin-right: 60px;
+	            	}
+	            }
+
+	            &:nth-child(1):before,
+	            &:nth-child(3):before,
+	            &:nth-child(2):after,
+	            &:nth-child(4):after {
+	                font-size: 8em;
+	                top: -2px;
+	            }
+	        }
+		}
+	}
+
+	.registration-form {
+	    h2 {
+	        font-size: 3.6em;
+	    }
+	    input {
+	        font-size: 2.6em;
+	        width: 90%;
+	    }
+	    .registration-button {
+            height: 60px;
+	    }
+	}
+
+	.registration {
+		.sm-visible {display: block;}
+		.common-info {
+			padding: 30px 0 0;
+			width: 90%;
+			height: 540px;
+		}
+	    .reg-descr {
+	        h2 {
+	            font-size: 3.6em;
+	        }
+	        .address {
+	            font-size: 3.2em;
+	        }
+	        .time {
+	            font-size: 6.4em;
+	        }
+	        .show-register {
+	            height: 60px;
+	        }
+	    }
+
+	    .popup-form {
+	        .close-popup {
+	            right: 14px;
+	            top: 14px;
+	            transform: scale(.7);
+	            &:hover {transform: scale(.6);}
+	        }
+	    }
+
+	    .no-game {
+	        h2 {
+	            font-size: 3em;
+	            margin: 30px 0;
+	        }
+	        p {
+	            font-size: 3em;
+	            margin-bottom: 38px;
+	        }
+	        .social-icons {
+	            li {
+	                &:first-child {margin-right: 36px;}
+	                &:last-child {margin-left: 36px;}
+	            }
+	        }
+	    }
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 420px)
+{
+	.registration-form {
+	    .registration-button {
+            width: 80%;
+	    }
+	}
+
+	.registration {
+		.common-info {
+			.brand {font-size: 5em;}
+		}
+	    .reg-descr {
+	        h2 {
+	            font-size: 3em;
+	        }
+	        .address {
+	            font-size: 3.2em;
+	        }
+	        .time {
+	            font-size: 6.4em;
+	        }
+	        .show-register {
+	            width: 80%;
+	        }
+	    }
+
+	    .popup-form {
+	        .close-popup {
+	            right: 6px;
+	            top: 6px;
+	            transform: scale(.6);
+	            &:hover {transform: scale(.5);}
+	        }
+	    }
+
+	    .no-game {
+	        h2 {
+	            font-size: 2.6em;
+	        }
+	        p {
+	            font-size: 2.6em;
+	        }
+	        .social-icons {
+	            li {
+	                &:first-child {margin-right: 26px;}
+	                &:last-child {margin-left: 26px;}
+	            }
+	        }
+	    }
+
+	    .chosen-container {
+			font-size: 3em;
+			width: 290px !important;
+		}
+	}
+
+	.contacts {
+		.form-wrapper {
+			h2 {font-size: 28px;}
+		}
+	}
+}
+
+@media only screen and (max-width : 380px) {
+	header {
+		.banner {
+			.banner-content {
+				h1 {
+					font-size: 30px;
+					padding: 0 12px;
+				}
+			}
+		}
+	}
+
+	.registration-form {
+	    h2 {
+	        font-size: 3.6em;
+	    }
+	    input {
+	    	color: #000;
+	        font-size: 2.4em;
+	        // width: 260px;
+	    }
+	}
+
+	.registration {
+		.common-info {
+			.brand {font-size: 4.4em;}
+		}
+	    .reg-descr {
+	        h2 {
+	            font-size: 2.8em;
+	        }
+	        .address {
+	            font-size: 3em;
+	        }
+	        .time {
+	            font-size: 5em;
+	        }
+	        .show-register {
+	            margin: 30px auto 0;
+	        }
+	    }
+
+	    .popup-form {
+	        .close-popup {
+	            right: 6px;
+	            top: 6px;
+	            transform: scale(.6);
+	            &:hover {transform: scale(.5);}
+	        }
+	    }
+
+	    .no-game {
+	        h2 {
+	            font-size: 2.6em;
+	        }
+	        p {
+	            font-size: 2.6em;
+	        }
+	        .social-icons {
+	            li {
+	            	img {width: 60px;}
+	                &:first-child {margin-right: 22px;}
+	                &:last-child {margin-left: 22px;}
+	            }
+	        }
+	    }
+
+	    .calendar-wrapper {
+			.calendar {
+				.ui-datepicker-calendar td {
+					padding: 0 3px;
+				}
+			}
+		}
+	}
+
+	.rules {
+		.small-visible {
+			.rule {
+			width: 90%;
+				div {
+					&.content {
+						h2 {font-size: 3em;}
+						p {font-size: 2.2em;}
+					}
+				}
+
+				&:nth-child(1) {
+	            	div {
+	            		margin-left: 40px;
+	            	}
+	            }
+	            &:nth-child(3) {
+	            	div {
+	            		margin-left: 50px;
+	            	}
+	            }
+
+	            &:nth-child(2),
+	            &:nth-child(4) {
+	            	div {
+	            		margin-right: 50px;
+	            	}
+	            }
+
+	            &:nth-child(1):before,
+	            &:nth-child(3):before,
+	            &:nth-child(2):after,
+	            &:nth-child(4):after {
+	                font-size: 7em;
+	                top: 2px;
+	            }
+			}	
+		}
+	}
+}
+
+@media only screen and (max-width : 320px) {
+	.registration {
+		.chosen-container {
+			font-size: 2.8em;
+			width: 250px !important;
+		}
+
+		.calendar-wrapper {
+			.calendar {
+				.ui-datepicker-prev, .ui-datepicker-next {top: 18px;}
+				.ui-datepicker-month {font-size: 2.5em;}
+				.ui-datepicker-calendar td {padding: 0 2px;}
+			}
+		}
+
+		.common-info {
+			width: 100%;
+		}
+
+		.no-game {
+	        .social-icons {
+	            li {
+	            	img {width: 52px;}
+	                &:first-child {margin-right: 18px;}
+	                &:last-child {margin-left: 18px;}
+	            }
+	        }
+	    }
+	}
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+{
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+{
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+{
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+{
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+{
+}
